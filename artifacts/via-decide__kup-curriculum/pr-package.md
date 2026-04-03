@@ -1,9 +1,9 @@
-Branch: simba/create-the-domain-adaptation-engine-in-srctempla
-Title: Create the 'Domain Adaptation' engine in src/templates/domain-expande...
+Branch: simba/build-the-passage-streamer-in-srcsimpassage-inje
+Title: Build the 'Passage Streamer' in src/sim/passage-injector.js. This scr...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Create the 'Domain Adaptation' engine in src/templates/domain-expander.json. Develop a specialized agent that helps founders re-train the KUP data-centric pipeline for a new extreme environment (e.g., high-humidity agricultural monitoring or urban heat-island sensing).
+- Goal: Build the 'Passage Streamer' in src/sim/passage-injector.js. This script connects the Digital Twin output to the kup-ai-stack ingestion endpoint. It must be capable of "Burst Mode" (simulating 1,000 vehicles per minute) to stress-test the pipeline's concurrency limits.
 
 ## Testing Checklist
 - [ ] Run unit/integration tests

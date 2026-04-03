@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Create the 'Domain Adaptation' engine in src/templates/domain-expander.json. Develop a specialized agent that helps founders re-train the KUP data-centric pipeline for a new extreme environment (e.g., high-humidity agricultural monitoring or urban heat-island sensing).
+Build the 'Passage Streamer' in src/sim/passage-injector.js. This script connects the Digital Twin output to the kup-ai-stack ingestion endpoint. It must be capable of "Burst Mode" (simulating 1,000 vehicles per minute) to stress-test the pipeline's concurrency limits.
 
 CONSTRAINTS
-The engine must use the core "Data Quality > Model Complexity" principle from the framework. It must output a "Feasibility Report" for KUP 2.0 deployment in a non-highway setting.
+Use the Sovereign terminal theme to log "STREAMING PASSAGE [ID] | TEMP: [X]°C | NOISE: [Y]%". Ensure it supports the 'Scenario 2' chaos injection triggers.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
