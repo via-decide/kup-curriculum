@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Build the 'Passage Streamer' in src/sim/passage-injector.js. This script connects the Digital Twin output to the kup-ai-stack ingestion endpoint. It must be capable of "Burst Mode" (simulating 1,000 vehicles per minute) to stress-test the pipeline's concurrency limits.
+Implement the 'Volume Scaler' in src/sim/volume-controller.js. This module must manage the long-running execution of the digital twin to reach the 100,000 simulated vehicle passage milestone.
 
 CONSTRAINTS
-Use the Sovereign terminal theme to log "STREAMING PASSAGE [ID] | TEMP: [X]°C | NOISE: [Y]%". Ensure it supports the 'Scenario 2' chaos injection triggers.
+Use the Sovereign theme to display a real-time "Road-to-100K" progress bar. Log any data pipeline bottlenecks that occur when the SQLite database exceeds 1GB in size.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
