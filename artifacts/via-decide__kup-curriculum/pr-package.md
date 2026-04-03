@@ -1,9 +1,9 @@
-Branch: simba/build-the-passage-streamer-in-srcsimpassage-inje
-Title: Build the 'Passage Streamer' in src/sim/passage-injector.js. This scr...
+Branch: simba/implement-the-volume-scaler-in-srcsimvolume-cont
+Title: Implement the 'Volume Scaler' in src/sim/volume-controller.js. This m...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Build the 'Passage Streamer' in src/sim/passage-injector.js. This script connects the Digital Twin output to the kup-ai-stack ingestion endpoint. It must be capable of "Burst Mode" (simulating 1,000 vehicles per minute) to stress-test the pipeline's concurrency limits.
+- Goal: Implement the 'Volume Scaler' in src/sim/volume-controller.js. This module must manage the long-running execution of the digital twin to reach the 100,000 simulated vehicle passage milestone.
 
 ## Testing Checklist
 - [ ] Run unit/integration tests

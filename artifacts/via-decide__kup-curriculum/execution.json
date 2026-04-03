@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/build-the-passage-streamer-in-srcsimpassage-inje",
+  "branch": "simba/implement-the-volume-scaler-in-srcsimvolume-cont",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",
