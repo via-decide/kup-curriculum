@@ -1,7 +1,7 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Create the 'KUP 2.0 Domain Scaffolder' in src/templates/kup-v2-scaffold.json. This agent must guide founders through the "Week 1: Data-Centric AI" principles for a new domain, such as agricultural moisture sensing or urban heat-island monitoring. [span_12](start_span)[span_13](start_span)constraints: The agent must strictly enforce the "Six Quality Dimensions"[span_12](end_span)[span_13](end_span) [span_14](start_span)to ensure the new domain avoids the 95% GenAI failure rate[span_14](end_span).
+Create the 'Domain Transfer Adapter' in src/templates/kup-v2-adapter.json. This agent must guide founders through mapping the "Six Quality Dimensions" to a new industry (e.g., urban heat-island sensing). [cite_start]constraints: The adapter must strictly enforce the "Data Quality > Model Complexity" rule to prevent the 95% GenAI failure rate in KUP 2.0 cohorts[span_4](end_span)[span_5](end_span).
 
 CONSTRAINTS
 Preserve existing code; prefer additive changes.
