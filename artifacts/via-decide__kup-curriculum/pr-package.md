@@ -1,9 +1,9 @@
-Branch: simba/integrate-digital-twin-into-month-1-curriculum-w
-Title: Integrate digital twin into Month 1 curriculum. Week 1 Friday: Instea...
+Branch: simba/create-the-simulation-guide-agent-template-in-sr
+Title: Create 'The Simulation Guide' Agent Template in src/templates/simulat...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Every founder learns data-centric AI + extreme climate challenges without waiting for permits.
+- Goal: Create 'The Simulation Guide' Agent Template in src/templates/simulation-guide.json. Configure it to assist founders in generating 1M synthetic vehicle passages using the digital twin.
 
 ## Testing Checklist
 - [ ] Run unit/integration tests
