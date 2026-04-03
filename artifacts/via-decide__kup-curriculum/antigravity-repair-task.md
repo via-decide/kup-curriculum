@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Create 'The Simulation Guide' Agent Template in src/templates/simulation-guide.json. Configure it to assist founders in generating 1M synthetic vehicle passages using the digital twin.
+Build a 'Chaos Injection' utility in src/utils/chaos-engine.js. [span_3](start_span)This utility should allow an admin to force-inject "Scenario 2" noise (packet loss and temperature-induced drift) into any active digital twin data stream[span_3](end_span).
 
 RULES
 1. Audit touched files first and identify regressions.
