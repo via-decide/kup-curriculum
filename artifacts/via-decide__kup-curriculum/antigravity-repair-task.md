@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Implement the 'Recovery Validator' in src/evaluation/fix-checker.js. After a 'Chaos Injection' event, this script must monitor the model's output to verify if accuracy returns to >80% following the founder's intervention.
+Create the 'Domain Adaptation' engine in src/templates/domain-expander.json. Develop a specialized agent that helps founders re-train the KUP data-centric pipeline for a new extreme environment (e.g., high-humidity agricultural monitoring or urban heat-island sensing).
 
 RULES
 1. Audit touched files first and identify regressions.
