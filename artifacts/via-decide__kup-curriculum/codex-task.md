@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Implement the 'First Passage Validator' in src/sim/handshake.js. This script must: 1) Trigger a single vehicle passage in the Digital Twin, 2) Extract the TPM features, and 3) Receive a "Safe/Unsafe" classification from the local Vora LLM.
+Implement the 'Geometry Sync' in src/sim/site-fidelity.js. Calibrate the Digital Twin's sensor placement (Height, Angle, Sampling Rate) to match the physical NHAI site specifications.
 
 CONSTRAINTS
-The founder must log the "End-to-End Latency" in milliseconds. If latency exceeds 500ms for a single passage, the 'Edge Architect' agent must intervene to optimize their local Docker/Ollama configuration.
+Use the Sovereign theme to log "FIDELITY CHECK: [X]% MATCH". If the synthetic data distribution deviates from the real-world NHAI baseline by >5%, the 'Edge Architect' agent must force a re-calibration.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
