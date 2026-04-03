@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Integrate digital twin into Month 1 curriculum. Week 1 Friday: Instead of just ViaLogic decision tree, founders also get access to the digital twin with 10K simulated vehicle passages. Week 2 Monday: Launch data quality lab using digital twin data. Founders label 200 passages, deliberately introduce 20% noise, train Random Forest, see the PDF's empirical finding (10% correction > model complexity). Week 2 Wednesday: Scale up. Founders access 500K passages from digital twin, run the full data quality workflow. Week 3 Monday: Scenario 2 stress test: train on Week 2 clean data, deploy against Week 3 noisy simulated data (temperature variation, packet loss), watch accuracy collapse, implement drift monitoring. Week 4: Train on 1M passages across 3 climate conditions, validate on held-out set. All data is synthetic (digital twin), so no dependency on real NHAI approvals. Real data comes post-MVP (pilot phase).
+Create 'The Simulation Guide' Agent Template in src/templates/simulation-guide.json. Configure it to assist founders in generating 1M synthetic vehicle passages using the digital twin.
 
 CONSTRAINTS
-Digital twin must be live by Day 1 of Month 1. Founders must be able to generate 100K passages in <1 hour on standard laptop.
+The agent must deliberately inject "Scenario 2" environmental chaos (sensor noise, 20-48°C temperature extremes) into founder scripts to harden their models.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
