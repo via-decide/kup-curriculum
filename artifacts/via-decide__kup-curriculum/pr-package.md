@@ -1,9 +1,9 @@
-Branch: simba/create-the-domain-transfer-adapter-in-srctemplat
-Title: Create the 'Domain Transfer Adapter' in src/templates/kup-v2-adapter....
+Branch: simba/build-logichub-efficiency-templates-in-srctempla
+Title: Build 'LogicHub Efficiency Templates' in src/templates/token-architec...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Create the 'Domain Transfer Adapter' in src/templates/kup-v2-adapter.json. This agent must guide founders through mapping the "Six Quality Dimensions" to a new industry (e.g., urban heat-island sensing). [cite_start]constraints: The adapter must strictly enforce the "Data Quality > Model Complexity" rule to prevent the 95% GenAI failure rate in KUP 2.0 cohorts[span_4](end_span)[span_5](end_span).
+- Goal: Build 'LogicHub Efficiency Templates' in src/templates/token-architect.json. Configure the 'Quality Reviewer' agent to guide founders in writing prompts that use <500 tokens for complex highway decision logic. [span_6](start_span)constraints: The agent must reject any prompt that includes "Data Dumps" and instead enforce "Structured Payloads" to prevent context rot.[span_6](end_span)
 
 ## Testing Checklist
 - [ ] Run unit/integration tests
