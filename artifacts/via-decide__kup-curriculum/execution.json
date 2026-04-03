@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/implement-the-volume-scaler-in-srcsimvolume-cont",
+  "branch": "simba/create-the-domain-transfer-adapter-in-srctemplat",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",
