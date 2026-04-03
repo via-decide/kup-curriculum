@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Create the 'Domain Adaptation' engine in src/templates/domain-expander.json. Develop a specialized agent that helps founders re-train the KUP data-centric pipeline for a new extreme environment (e.g., high-humidity agricultural monitoring or urban heat-island sensing).
+Build the 'Passage Streamer' in src/sim/passage-injector.js. This script connects the Digital Twin output to the kup-ai-stack ingestion endpoint. It must be capable of "Burst Mode" (simulating 1,000 vehicles per minute) to stress-test the pipeline's concurrency limits.
 
 RULES
 1. Audit touched files first and identify regressions.
