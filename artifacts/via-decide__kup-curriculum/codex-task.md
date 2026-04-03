@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Create 'The Simulation Guide' Agent Template in src/templates/simulation-guide.json. Configure it to assist founders in generating 1M synthetic vehicle passages using the digital twin.
+Build a 'Chaos Injection' utility in src/utils/chaos-engine.js. [span_3](start_span)This utility should allow an admin to force-inject "Scenario 2" noise (packet loss and temperature-induced drift) into any active digital twin data stream[span_3](end_span).
 
 CONSTRAINTS
-The agent must deliberately inject "Scenario 2" environmental chaos (sensor noise, 20-48°C temperature extremes) into founder scripts to harden their models.
+When triggered, the terminal must display a high-visibility "STRESS TEST ACTIVE" warning in the Sovereign theme. [span_4](start_span)The LLM must then switch to the 'Scenario Simulator' agent to guide the founders through the recovery process[span_4](end_span).
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
