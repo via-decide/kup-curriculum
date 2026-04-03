@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/build-logichub-efficiency-templates-in-srctempla",
+  "branch": "simba/implement-the-first-passage-validator-in-srcsimh",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",
