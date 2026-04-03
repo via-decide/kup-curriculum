@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Implement the 'Recovery Validator' in src/evaluation/fix-checker.js. After a 'Chaos Injection' event, this script must monitor the model's output to verify if accuracy returns to >80% following the founder's intervention.
+Create the 'Domain Adaptation' engine in src/templates/domain-expander.json. Develop a specialized agent that helps founders re-train the KUP data-centric pipeline for a new extreme environment (e.g., high-humidity agricultural monitoring or urban heat-island sensing).
 
 CONSTRAINTS
-If the model remains collapsed after the fix, the 'Scenario Simulator' agent must provide a "Context Rot" analysis, identifying exactly where the data-centric AI pipeline failed to handle the noise.
+The engine must use the core "Data Quality > Model Complexity" principle from the framework. It must output a "Feasibility Report" for KUP 2.0 deployment in a non-highway setting.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
