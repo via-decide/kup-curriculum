@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/create-the-chaos-lab-suite-in-srclabsscenario-tw",
+  "branch": "simba/implement-the-recovery-validator-in-srcevaluatio",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",

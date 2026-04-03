@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Create the 'Chaos Lab' suite in src/labs/scenario-two-stress.js. [span_9](start_span)[span_10](start_span)Develop scripts that founders can use to inject packet loss, sensor vibration, and extreme temperature drift (up to 48°C) into their digital twin environment[span_9](end_span)[span_10](end_span). [span_11](start_span)[span_12](start_span)constraints: The output must show a "Model Collapse" visualization when the noise exceeds the training threshold, forcing founders to implement the Week 3 drift detection strategies[span_11](end_span)[span_12](end_span).
+Implement the 'Recovery Validator' in src/evaluation/fix-checker.js. After a 'Chaos Injection' event, this script must monitor the model's output to verify if accuracy returns to >80% following the founder's intervention.
 
 CONSTRAINTS
-Preserve existing code; prefer additive changes.
+If the model remains collapsed after the fix, the 'Scenario Simulator' agent must provide a "Context Rot" analysis, identifying exactly where the data-centric AI pipeline failed to handle the noise.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
