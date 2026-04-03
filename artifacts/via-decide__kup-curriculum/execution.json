@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/create-the-domain-adaptation-engine-in-srctempla",
+  "branch": "simba/build-the-passage-streamer-in-srcsimpassage-inje",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",
