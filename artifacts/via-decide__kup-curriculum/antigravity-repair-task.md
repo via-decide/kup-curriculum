@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Build the 'Passage Streamer' in src/sim/passage-injector.js. This script connects the Digital Twin output to the kup-ai-stack ingestion endpoint. It must be capable of "Burst Mode" (simulating 1,000 vehicles per minute) to stress-test the pipeline's concurrency limits.
+Implement the 'Volume Scaler' in src/sim/volume-controller.js. This module must manage the long-running execution of the digital twin to reach the 100,000 simulated vehicle passage milestone.
 
 RULES
 1. Audit touched files first and identify regressions.
