@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Create the 'Domain Transfer Adapter' in src/templates/kup-v2-adapter.json. This agent must guide founders through mapping the "Six Quality Dimensions" to a new industry (e.g., urban heat-island sensing). [cite_start]constraints: The adapter must strictly enforce the "Data Quality > Model Complexity" rule to prevent the 95% GenAI failure rate in KUP 2.0 cohorts[span_4](end_span)[span_5](end_span).
+Build 'LogicHub Efficiency Templates' in src/templates/token-architect.json. Configure the 'Quality Reviewer' agent to guide founders in writing prompts that use <500 tokens for complex highway decision logic. [span_6](start_span)constraints: The agent must reject any prompt that includes "Data Dumps" and instead enforce "Structured Payloads" to prevent context rot.[span_6](end_span)
 
 RULES
 1. Audit touched files first and identify regressions.
