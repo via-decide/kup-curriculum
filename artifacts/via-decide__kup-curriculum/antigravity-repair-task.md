@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Implement the 'Geometry Sync' in src/sim/site-fidelity.js. Calibrate the Digital Twin's sensor placement (Height, Angle, Sampling Rate) to match the physical NHAI site specifications.
+Implement the 'Chaos Igniter' in src/sim/chaos-engine.js. This script must apply a dynamic "Drift Coefficient" ($D_c$) to the tire pressure readings.
 
 RULES
 1. Audit touched files first and identify regressions.

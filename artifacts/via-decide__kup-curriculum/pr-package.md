@@ -1,9 +1,9 @@
-Branch: simba/implement-the-geometry-sync-in-srcsimsite-fideli
-Title: Implement the 'Geometry Sync' in src/sim/site-fidelity.js. Calibrate ...
+Branch: simba/implement-the-chaos-igniter-in-srcsimchaos-engin
+Title: Implement the 'Chaos Igniter' in src/sim/chaos-engine.js. This script...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Implement the 'Geometry Sync' in src/sim/site-fidelity.js. Calibrate the Digital Twin's sensor placement (Height, Angle, Sampling Rate) to match the physical NHAI site specifications.
+- Goal: Implement the 'Chaos Igniter' in src/sim/chaos-engine.js. This script must apply a dynamic "Drift Coefficient" ($D_c$) to the tire pressure readings.
 
 ## Testing Checklist
 - [ ] Run unit/integration tests

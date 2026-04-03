@@ -1,10 +1,10 @@
 You are working in repository via-decide/kup-curriculum on branch main.
 
 MISSION
-Implement the 'Geometry Sync' in src/sim/site-fidelity.js. Calibrate the Digital Twin's sensor placement (Height, Angle, Sampling Rate) to match the physical NHAI site specifications.
+Implement the 'Chaos Igniter' in src/sim/chaos-engine.js. This script must apply a dynamic "Drift Coefficient" ($D_c$) to the tire pressure readings.
 
 CONSTRAINTS
-Use the Sovereign theme to log "FIDELITY CHECK: [X]% MATCH". If the synthetic data distribution deviates from the real-world NHAI baseline by >5%, the 'Edge Architect' agent must force a re-calibration.
+Preserve existing code; prefer additive changes.
 
 PROCESS (MANDATORY)
 1. Read README.md and AGENTS.md before editing.
