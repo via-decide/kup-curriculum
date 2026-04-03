@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/build-a-chaos-injection-utility-in-srcutilschaos",
+  "branch": "simba/create-the-chaos-lab-suite-in-srclabsscenario-tw",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",

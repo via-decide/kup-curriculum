@@ -1,9 +1,9 @@
-Branch: simba/build-a-chaos-injection-utility-in-srcutilschaos
-Title: Build a 'Chaos Injection' utility in src/utils/chaos-engine.js. [span...
+Branch: simba/create-the-chaos-lab-suite-in-srclabsscenario-tw
+Title: Create the 'Chaos Lab' suite in src/labs/scenario-two-stress.js. [spa...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Build a 'Chaos Injection' utility in src/utils/chaos-engine.js. [span_3](start_span)This utility should allow an admin to force-inject "Scenario 2" noise (packet loss and temperature-induced drift) into any active digital twin data stream[span_3](end_span).
+- Goal: Create the 'Chaos Lab' suite in src/labs/scenario-two-stress.js. [span_9](start_span)[span_10](start_span)Develop scripts that founders can use to inject packet loss, sensor vibration, and extreme temperature drift (up to 48°C) into their digital twin environment[span_9](end_span)[span_10](end_span). [span_11](start_span)[span_12](start_span)constraints: The output must show a "Model Collapse" visualization when the noise exceeds the training threshold, forcing founders to implement the Week 3 drift detection strategies[span_11](end_span)[span_12](end_span).
 
 ## Testing Checklist
 - [ ] Run unit/integration tests

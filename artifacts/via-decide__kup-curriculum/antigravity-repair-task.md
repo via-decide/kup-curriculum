@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Build a 'Chaos Injection' utility in src/utils/chaos-engine.js. [span_3](start_span)This utility should allow an admin to force-inject "Scenario 2" noise (packet loss and temperature-induced drift) into any active digital twin data stream[span_3](end_span).
+Create the 'Chaos Lab' suite in src/labs/scenario-two-stress.js. [span_9](start_span)[span_10](start_span)Develop scripts that founders can use to inject packet loss, sensor vibration, and extreme temperature drift (up to 48°C) into their digital twin environment[span_9](end_span)[span_10](end_span). [span_11](start_span)[span_12](start_span)constraints: The output must show a "Model Collapse" visualization when the noise exceeds the training threshold, forcing founders to implement the Week 3 drift detection strategies[span_11](end_span)[span_12](end_span).
 
 RULES
 1. Audit touched files first and identify regressions.
