@@ -1,9 +1,9 @@
-Branch: simba/build-logichub-efficiency-templates-in-srctempla
-Title: Build 'LogicHub Efficiency Templates' in src/templates/token-architec...
+Branch: simba/implement-the-first-passage-validator-in-srcsimh
+Title: Implement the 'First Passage Validator' in src/sim/handshake.js. This...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Build 'LogicHub Efficiency Templates' in src/templates/token-architect.json. Configure the 'Quality Reviewer' agent to guide founders in writing prompts that use <500 tokens for complex highway decision logic. [span_6](start_span)constraints: The agent must reject any prompt that includes "Data Dumps" and instead enforce "Structured Payloads" to prevent context rot.[span_6](end_span)
+- Goal: Implement the 'First Passage Validator' in src/sim/handshake.js. This script must: 1) Trigger a single vehicle passage in the Digital Twin, 2) Extract the TPM features, and 3) Receive a "Safe/Unsafe" classification from the local Vora LLM.
 
 ## Testing Checklist
 - [ ] Run unit/integration tests
