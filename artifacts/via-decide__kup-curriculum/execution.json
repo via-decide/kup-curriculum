@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/create-the-domain-transfer-adapter-in-srctemplat",
+  "branch": "simba/create-the-kup-20-domain-scaffolder-in-srctempla",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",

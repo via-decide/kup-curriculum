@@ -4,7 +4,7 @@ TARGET
 Validate and repair only the files touched by the previous implementation.
 
 TASK
-Create the 'Domain Transfer' adapter in src/templates/kup-two-point-zero.json. [cite_start]Program the Agent to assist founders in mapping the "Data Quality > Model Complexity" principle to a new vertical, such as urban heat-island sensing or port logistics.[span_13](end_span) [span_14](start_span)[span_15](start_span)constraints: The adapter must strictly enforce the 'Six Quality Dimensions' and 'Three Pollution Scenarios' identified in the original PDF to prevent the 95% failure rate in the new domain.[span_14](end_span)[span_15](end_span)
+Create the 'KUP 2.0 Domain Scaffolder' in src/templates/kup-v2-scaffold.json. This agent must guide founders through the "Week 1: Data-Centric AI" principles for a new domain, such as agricultural moisture sensing or urban heat-island monitoring. [span_12](start_span)[span_13](start_span)constraints: The agent must strictly enforce the "Six Quality Dimensions"[span_12](end_span)[span_13](end_span) [span_14](start_span)to ensure the new domain avoids the 95% GenAI failure rate[span_14](end_span).
 
 RULES
 1. Audit touched files first and identify regressions.
