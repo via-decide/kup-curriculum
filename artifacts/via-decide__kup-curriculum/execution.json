@@ -1,7 +1,7 @@
 {
   "repo": "via-decide/kup-curriculum",
   "mode": "codex_then_antigravity",
-  "branch": "simba/create-the-simulation-guide-agent-template-in-sr",
+  "branch": "simba/build-a-chaos-injection-utility-in-srcutilschaos",
   "files_to_create": [
     "codex-task.md",
     "antigravity-repair-task.md",
