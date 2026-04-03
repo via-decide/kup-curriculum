@@ -1,9 +1,9 @@
-Branch: simba/implement-the-first-passage-validator-in-srcsimh
-Title: Implement the 'First Passage Validator' in src/sim/handshake.js. This...
+Branch: simba/implement-the-geometry-sync-in-srcsimsite-fideli
+Title: Implement the 'Geometry Sync' in src/sim/site-fidelity.js. Calibrate ...
 
 ## Summary
 - Repo orchestration task for via-decide/kup-curriculum
-- Goal: Implement the 'First Passage Validator' in src/sim/handshake.js. This script must: 1) Trigger a single vehicle passage in the Digital Twin, 2) Extract the TPM features, and 3) Receive a "Safe/Unsafe" classification from the local Vora LLM.
+- Goal: Implement the 'Geometry Sync' in src/sim/site-fidelity.js. Calibrate the Digital Twin's sensor placement (Height, Angle, Sampling Rate) to match the physical NHAI site specifications.
 
 ## Testing Checklist
 - [ ] Run unit/integration tests
