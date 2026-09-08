@@ -1,0 +1,11 @@
+bridgeId: bridge_diffusion_materials
+edgeType: REPRESENTS
+from: concept_diffusion
+to: materials-science
+description: >-
+  Materials science uses diffusion to model atomic and defect transport, with real
+  mechanisms depending on crystal structure, defects, grain boundaries, stress,
+  electrical potential, and noncrystalline structure. MIT 3.21 treats these explicitly.
+sourceRefs:
+  - source_mit_kinetic_processes_materials_321
+status: VERIFIED
