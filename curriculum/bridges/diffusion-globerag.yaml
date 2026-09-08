@@ -1,0 +1,12 @@
+bridgeId: bridge_diffusion_globerag
+edgeType: UNRESOLVED_WITH
+from: concept_diffusion
+to: ai-reasoning-globerag
+description: >-
+  Diffusion is a candidate analogy for studying how local state changes can produce a
+  global evolving field, but physical Fickian semantics must not be imported into
+  GlobeRAG without evidence. This bridge is intentionally unresolved: it exists to
+  generate a research question, not to certify an equivalence.
+sourceRefs:
+  - source_pmc_variable_order_fractional_review
+status: HYPOTHESIS
