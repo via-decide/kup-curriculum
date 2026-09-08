@@ -1,0 +1,11 @@
+bridgeId: bridge_diffusion_biology
+edgeType: REPRESENTS
+from: concept_diffusion
+to: biology
+description: >-
+  Passive biological transport can include simple diffusion down concentration or
+  electrochemical gradients, while membranes, channels, carriers, and active transport
+  constrain when a simple diffusion model is admissible.
+sourceRefs:
+  - source_ncbi_molbio_membrane_transport
+status: VERIFIED
