@@ -122,7 +122,7 @@ sources:
       - "Proof that a planned KUP camera-based gel experiment is quantitatively valid before calibration and replication."
 
   - sourceId: source_gwu_aapt_diffusion_gels
-    title: "AAPT Workshop, Brownian Motion to Diffusion Random Walks in Introductory Physics - Diffusion in Gels"
+    title: "AAPT Workshop, Brownian Motion to Diffusion Random Walks in Introductory Physics"
     url: "https://www2.gwu.edu/~phy21bio/2010AAPTDC/diffusioningels.html"
     doi: null
     publisher: "George Washington University"
@@ -132,7 +132,7 @@ sources:
     level: UNDERGRADUATE
     versionOrPublicationDate: "2010 AAPT workshop"
     lastVerified: "2026-09-09"
-    whatItTeaches: "Provides a camera-based agarose-gel diffusion activity using repeated images, spatial intensity profiles, and FWHM measurements over time."
+    whatItTeaches: "Its Diffusion in Gels section provides a camera-based agarose-gel activity using repeated images, spatial intensity profiles, and FWHM measurements over time."
     kupHorizontals: [scientific-method-experimental-design, measurement-science-metrology, physics, transport-phenomena]
     notEvidenceFor:
       - "A calibrated concentration measurement unless image intensity is independently related to concentration in the chosen setup."
