@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://via-decide/kup-curriculum/contracts/bridge.schema.json",
+  "title": "Bridge",
+  "description": "A typed cross-domain edge. The graph models relationships across domains, not only prerequisite chains -- a bridge is what makes the curriculum a graph instead of a syllabus.",
+  "type": "object",
+  "required": ["bridgeId", "edgeType", "from", "to"],
+  "additionalProperties": false,
+  "properties": {
+    "bridgeId": {
+      "type": "string",
+      "pattern": "^bridge_[a-z0-9_]+$"
+    },
+    "edgeType": {
+      "type": "string",
+      "enum": [
+        "PREREQUISITE_OF", "REPRESENTS", "GENERALIZES", "SPECIALIZES",
+        "MATHEMATICALLY_EQUIVALENT_TO", "PHYSICALLY_ANALOGOUS_TO",
+        "MEASURED_BY", "SIMULATED_BY", "CONTROLS", "CAUSES_CANDIDATE",
+        "EVIDENCE_FOR", "USED_BY_KUP_SYSTEM", "UNRESOLVED_WITH"
+      ]
+    },
+    "from": {
+      "type": "string",
+      "description": "conceptId or domainId this edge originates from."
+    },
+    "to": {
+      "type": "string",
+      "description": "conceptId or domainId this edge points to."
+    },
+    "description": {
+      "type": "string",
+      "description": "Why this edge is real, not just structurally plausible -- required for CAUSES_CANDIDATE and MATHEMATICALLY_EQUIVALENT_TO, where a wrong edge is a wrong scientific claim, not just a broken link."
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^source_[a-z0-9_]+$" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["HYPOTHESIS", "VERIFIED"],
+      "default": "HYPOTHESIS"
+    }
+  }
+}

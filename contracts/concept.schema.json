@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://via-decide/kup-curriculum/contracts/concept.schema.json",
+  "title": "Concept",
+  "description": "A single concept node. Every concept must be able to answer the 10-question contract (see issue via-decide/kup-curriculum#17) before it is promoted past DISCOVERED. A concept with every field present but no real sourceRefs is a hollow entry, not a completed one -- see tests/graph-integrity.test.mjs.",
+  "type": "object",
+  "required": [
+    "conceptId", "name", "depthState", "domainRefs",
+    "problemItRepresents", "representation", "physicalMeaning",
+    "simulation", "measurement", "globeragRelevance", "sourceRefs"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "conceptId": {
+      "type": "string",
+      "pattern": "^concept_[a-z0-9_]+$",
+      "description": "Stable, permanent ID, e.g. concept_fractional_derivative."
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "depthState": {
+      "type": "string",
+      "enum": [
+        "DISCOVERED", "FOUNDATIONAL", "WORKED_EXAMPLE",
+        "SIMULATED", "MEASURED", "CONNECTED", "APPLIED", "RESEARCH_READY"
+      ],
+      "description": "Spiral progression state, not a binary done/not-done flag. A concept can be revisited at higher depth as projects require it."
+    },
+    "domainRefs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+      "minItems": 1,
+      "description": "domainId values this concept belongs to. Must resolve to real entries in curriculum/graph.yaml."
+    },
+    "problemItRepresents": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Question 2: what problem created the need for this representation?"
+    },
+    "representation": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string", "enum": ["equation", "algorithm", "diagram", "protocol", "other"] },
+        "notationRefs": { "type": "array", "items": { "type": "string" } },
+        "equationText": { "type": "string" }
+      },
+      "description": "Question 3: the equation/representation itself."
+    },
+    "physicalMeaning": {
+      "type": "string",
+      "description": "Question 4: what each term physically means. Empty string allowed only while depthState is DISCOVERED."
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^concept_[a-z0-9_]+$" }
+    },
+    "bridges": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "bridgeId values connecting this concept to other domains (question 7)."
+    },
+    "applications": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "simulation": {
+      "type": "object",
+      "required": ["feasible"],
+      "additionalProperties": false,
+      "properties": {
+        "feasible": { "type": "boolean" },
+        "artifactRef": { "type": ["string", "null"] }
+      },
+      "description": "Question 8. artifactRef must point to a real committed artifact once depthState is SIMULATED or beyond -- a feasible:true with no artifactRef past that point is a hollow claim."
+    },
+    "measurement": {
+      "type": "object",
+      "required": ["feasible"],
+      "additionalProperties": false,
+      "properties": {
+        "feasible": { "type": "boolean" },
+        "evidenceRequirements": { "type": "array", "items": { "type": "string" } }
+      },
+      "description": "Question 9."
+    },
+    "globeragRelevance": {
+      "type": "object",
+      "required": ["role", "claimStatus"],
+      "additionalProperties": false,
+      "properties": {
+        "role": { "type": "string" },
+        "claimStatus": {
+          "type": "string",
+          "enum": ["HYPOTHESIS", "SUPPORTED", "ESTABLISHED"],
+          "description": "No claim may be ESTABLISHED merely because it appears in the curriculum -- acceptance criterion in issue #17. ESTABLISHED requires sourceRefs pointing to evidence outside this repo."
+        }
+      },
+      "description": "Question 10."
+    },
+    "failureBoundary": {
+      "type": "string",
+      "description": "Question 6: where does the model break?"
+    },
+    "unresolvedQuestions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^source_[a-z0-9_]+$" },
+      "description": "sourceId values from sources/free-source-shelf.yaml. A concept past DISCOVERED with zero sourceRefs is exactly the 'AI-generated pseudo-knowledge' failure mode named in issue #17 and must fail graph-integrity tests."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://via-decide/kup-curriculum/contracts/domain.schema.json",
+  "title": "Domain",
+  "description": "A top-level canonical domain in the KUP learning graph. Fixed at 35 for Phase 1 -- see curriculum/graph.yaml. A domain is not a subject to complete; it exists because it gives KUP a representation no other domain gives it.",
+  "type": "object",
+  "required": ["domainId", "name", "order", "kupRepresentation", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "domainId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Stable, permanent kebab-case ID. Never renamed once referenced by a concept/bridge -- rename is a new ID plus a supersedes edge, not an in-place edit."
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "order": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 35,
+      "description": "Position in the 35-domain inventory (not a prerequisite order -- see canonicalStackPosition for that)."
+    },
+    "kupRepresentation": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Answers the governing question directly: what representation does this field give KUP that another field cannot? Required, non-generic -- 'this teaches math' is not a valid answer."
+    },
+    "canonicalStackPosition": {
+      "type": ["string", "null"],
+      "description": "Where this domain sits in the MATHEMATICS -> ... -> WHOLE PHYSICAL SYSTEMS learning stack, if it has a fixed position. Null for domains that cut across the stack (e.g. Philosophy of Science, Logic)."
+    },
+    "relatedKupSystems": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "KUP repos/systems this domain's representations are known to feed (e.g. LogicHub, GlobeRAG, Orchade). Empty array is valid -- do not fabricate a relationship to look complete."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["FROZEN", "ACTIVE"],
+      "description": "FROZEN = domain ID and definition locked, no concepts seeded yet. ACTIVE = has >=1 seeded concept. Phase 1 domains start FROZEN."
+    },
+    "notes": { "type": "string" }
+  }
+}
