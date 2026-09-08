@@ -1,0 +1,117 @@
+conceptId: concept_diffusion
+name: Diffusion
+depthState: SIMULATED
+
+domainRefs:
+  - mathematics
+  - physics
+  - chemistry
+  - transport-phenomena
+  - biology
+  - materials-science
+  - simulation
+  - measurement-science-metrology
+  - scientific-method-experimental-design
+  - ai-reasoning-globerag
+
+problemItRepresents: >-
+  How does a spatially non-uniform population, concentration, temperature-like field,
+  or other conserved quantity spread through space over time when local microscopic
+  motion produces a net flux down an admissible gradient? Diffusion supplies both a
+  constitutive flux law and, when combined with conservation, a PDE for the time
+  evolution of the field.
+
+representation:
+  type: equation
+  notationRefs:
+    - "c(x,t): concentration or conserved scalar field"
+    - "J: flux vector, amount crossing unit area per unit time"
+    - "D: diffusion coefficient; scalar only in the simplest isotropic model"
+    - "grad(c): spatial concentration gradient"
+    - "div(J): divergence of flux"
+    - "laplacian(c): spatial Laplacian"
+  equationText: >-
+    Fick 1: J = -D grad(c); conservation: partial(c)/partial(t) + div(J) = 0;
+    therefore, for constant scalar D with no advection, reaction, or source term,
+    partial(c)/partial(t) = D laplacian(c).
+
+physicalMeaning: >-
+  The gradient states how rapidly concentration changes with position. The minus sign
+  in Fick's first law means the net diffusive flux points from higher toward lower
+  concentration under the stated model. D sets the time/length scale of spreading and
+  has dimensions L^2/T. Conservation converts local flux imbalance into local change:
+  if more material leaves a small region than enters it, its concentration falls.
+  Microscopic motion can be random while the ensemble concentration field evolves
+  predictably. The same mathematical structure can describe heat conduction under
+  analogous assumptions, but the physical quantities and constitutive parameters are
+  not interchangeable.
+
+prerequisites: []
+
+bridges:
+  - bridge_diffusion_pde
+  - bridge_diffusion_chemistry
+  - bridge_diffusion_transport
+  - bridge_diffusion_biology
+  - bridge_diffusion_materials
+  - bridge_diffusion_simulation
+  - bridge_diffusion_globerag
+
+applications:
+  - "Chemical species spreading and intermixing under concentration gradients"
+  - "Mass transfer in transport-phenomena models"
+  - "Passive movement of some molecules across or within biological media, subject to membrane and electrochemical constraints"
+  - "Atomic and defect transport in crystalline and noncrystalline materials"
+  - "Mathematical analogy to heat conduction under matching PDE assumptions"
+  - "KUP sensor/field-model validation where spatial transport must be distinguished from convection, reaction, or model error"
+
+simulation:
+  feasible: true
+  artifactRef: simulations/diffusion_1d.py
+
+measurement:
+  feasible: true
+  evidenceRequirements:
+    - "A bounded geometry and initial/boundary conditions recorded before the run"
+    - "A tracer-medium pair whose interaction does not invalidate the chosen diffusion model, or an explicit effective-diffusion interpretation"
+    - "Temperature recorded and held sufficiently stable for the intended comparison"
+    - "Suppression or measurement of bulk convection so spreading is not mislabeled as diffusion"
+    - "Fixed camera geometry/lighting or another calibrated concentration measurement method"
+    - "Time-stamped repeated observations with spatial scale calibration"
+    - "At least three independent replicates for any quantitative coefficient claim"
+    - "Model-fit residuals or another goodness-of-fit check before calling the result Fickian"
+    - "Raw images/data preserved separately from processed profiles and fitted parameters"
+
+globeragRelevance:
+  role: >-
+    Research analogy and benchmark candidate only: diffusion is a compact example of
+    local rules plus retained state producing a time-evolving global field. It can be
+    used to test whether GlobeRAG correctly separates a physical model, its boundary
+    conditions, observations, and model failure. No claim is made that knowledge or
+    evidence should literally propagate according to Fick's law.
+  claimStatus: HYPOTHESIS
+
+failureBoundary: >-
+  The constant-coefficient Fickian PDE is not a universal transport law. It must be
+  revised or replaced when bulk advection matters; sources, sinks, or reactions occur;
+  D depends strongly on concentration, temperature, position, direction, stress, or
+  composition; multicomponent coupling changes the flux law; electrochemical or other
+  driving forces dominate; boundaries or interfaces add resistance; microscopic
+  mechanisms require discrete treatment; or measured spreading is anomalous/non-Fickian
+  so mean-squared displacement does not scale linearly with time. In biology, simple
+  diffusion cannot stand in for active transport or transporter-mediated processes.
+
+unresolvedQuestions:
+  - "Which prerequisite concepts should become canonical nodes before diffusion is promoted beyond exemplar status: gradient, local conservation, Laplacian, and PDE?"
+  - "What deterministic diagnostic should KUP use to distinguish Fickian spreading from convection, reaction, concentration-dependent diffusion, and anomalous diffusion?"
+  - "For the planned gel experiment, which tracer/gel pair gives the cleanest camera-measurable concentration profile without binding or concentration-dependent artifacts?"
+  - "Can graph diffusion be a useful computational analogy for retrieval or evidence propagation without importing invalid physical semantics into GlobeRAG?"
+
+sourceRefs:
+  - source_iupac_diffusion_coefficient
+  - source_mit_pde_diffusion_18152
+  - source_mit_transport_3185
+  - source_mit_kinetic_processes_materials_321
+  - source_ncbi_molbio_membrane_transport
+  - source_pmc_variable_order_fractional_review
+  - source_ucdavis_ebs127_diffusion_lab
