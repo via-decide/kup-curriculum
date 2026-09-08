@@ -4,6 +4,8 @@ The canonical KUP learning graph: a cross-domain, representation-first research 
 
 This is **not** a university-style syllabus and must not become a flat list of courses. Full spec: [via-decide/kup-curriculum#17](https://github.com/via-decide/kup-curriculum/issues/17).
 
+This curriculum serves [via-decide/kup](https://github.com/via-decide/kup), the public KUP research protocol and benchmark — see its "Ecosystem" section. This repo owns the learning graph; `kup` and its entrants consume it rather than duplicating curriculum inside their own repos.
+
 ## The one governing question
 
 > **What representation does this field give KUP that another field cannot?**
