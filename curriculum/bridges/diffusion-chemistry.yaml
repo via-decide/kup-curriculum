@@ -1,0 +1,11 @@
+bridgeId: bridge_diffusion_chemistry
+edgeType: REPRESENTS
+from: concept_diffusion
+to: chemistry
+description: >-
+  In chemical systems, diffusion links concentration gradients to amount flux through
+  a diffusion coefficient. IUPAC defines D through J_n = -D grad(c_B); the bridge is
+  therefore an explicit constitutive relationship, not a metaphor.
+sourceRefs:
+  - source_iupac_diffusion_coefficient
+status: VERIFIED

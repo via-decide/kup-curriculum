@@ -1,0 +1,139 @@
+# Verified source records used by curriculum concepts.
+# Learning sources are scope-bounded: see notEvidenceFor on every record.
+
+sources:
+  - sourceId: source_mit_pde_diffusion_18152
+    title: "Syllabus | Introduction to Partial Differential Equations | Mathematics | MIT OpenCourseWare"
+    url: "https://ocw.mit.edu/courses/18-152-introduction-to-partial-differential-equations-fall-2011/pages/syllabus/"
+    doi: null
+    publisher: "Massachusetts Institute of Technology OpenCourseWare"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: UNDERGRADUATE
+    versionOrPublicationDate: "Fall 2011"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Places the diffusion equation among the fundamental PDEs and explicitly identifies it as a model for spreading heat energy and chemical diffusion processes."
+    kupHorizontals: [mathematics, physics, chemistry, simulation]
+    notEvidenceFor:
+      - "A measured diffusion coefficient for any particular KUP material, crop, gel, sensor, or field system."
+      - "The claim that every observed spreading process is Fickian diffusion."
+
+  - sourceId: source_iupac_diffusion_coefficient
+    title: "IUPAC - diffusion coefficient (D01719)"
+    url: "https://goldbook.iupac.org/terms/view/D01719"
+    doi: "10.1351/goldbook.D01719"
+    publisher: "International Union of Pure and Applied Chemistry"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: UNDERGRADUATE
+    versionOrPublicationDate: "2025, Gold Book online version 5.0.0"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Defines the diffusion coefficient D as the proportionality constant connecting amount flux to the negative concentration gradient, J_n = -D grad(c_B)."
+    kupHorizontals: [chemistry, transport-phenomena, measurement-science-metrology]
+    notEvidenceFor:
+      - "A universal constant value of D; diffusion coefficients depend on species, medium, temperature, composition, and model assumptions."
+      - "Validity of a constant scalar diffusion coefficient in multicomponent, anisotropic, heterogeneous, or non-Fickian systems."
+
+  - sourceId: source_mit_transport_3185
+    title: "Syllabus | Transport Phenomena in Materials Engineering | Materials Science and Engineering | MIT OpenCourseWare"
+    url: "https://ocw.mit.edu/courses/3-185-transport-phenomena-in-materials-engineering-fall-2003/pages/syllabus/"
+    doi: null
+    publisher: "Massachusetts Institute of Technology OpenCourseWare"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: UNDERGRADUATE
+    versionOrPublicationDate: "Fall 2003"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Connects conservation equations with constitutive transport laws and emphasizes the mathematical similarity between mass diffusion and heat conduction."
+    kupHorizontals: [transport-phenomena, physics, materials-science]
+    notEvidenceFor:
+      - "Equivalence of all heat-transfer and mass-transfer boundary conditions or material parameters."
+      - "A site-specific transport design without geometry, properties, boundary conditions, and validation."
+
+  - sourceId: source_mit_kinetic_processes_materials_321
+    title: "Lecture Notes | Kinetic Processes in Materials | Materials Science and Engineering | MIT OpenCourseWare"
+    url: "https://ocw.mit.edu/courses/3-21-kinetic-processes-in-materials-spring-2006/pages/lecture-notes/"
+    doi: null
+    publisher: "Massachusetts Institute of Technology OpenCourseWare"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: GRADUATE
+    versionOrPublicationDate: "Spring 2006"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Treats the diffusion equation, its solutions, discrete jump processes, diffusion in crystals, atomic diffusivity models, short-circuit diffusion, and diffusion in noncrystalline materials."
+    kupHorizontals: [materials-science, chemistry, transport-phenomena, simulation]
+    notEvidenceFor:
+      - "A diffusion mechanism or coefficient for an uncharacterized KUP material without material-specific evidence."
+      - "The assumption that grain boundaries, defects, stress, or electrical potential are negligible."
+
+  - sourceId: source_ncbi_molbio_membrane_transport
+    title: "Principles of Membrane Transport - Molecular Biology of the Cell - NCBI Bookshelf"
+    url: "https://www.ncbi.nlm.nih.gov/books/NBK26815/"
+    doi: null
+    publisher: "National Center for Biotechnology Information, U.S. National Library of Medicine"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: UNDERGRADUATE
+    versionOrPublicationDate: "2002, Molecular Biology of the Cell 4th edition"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Explains passive transport down concentration or electrochemical gradients, distinguishes simple diffusion from channel/carrier-mediated transport, and explains why membrane permeability depends strongly on solute properties."
+    kupHorizontals: [biology, chemistry, transport-phenomena]
+    notEvidenceFor:
+      - "The claim that all biological membrane transport is simple diffusion."
+      - "Quantitative permeability or transport rates for a specific plant, tissue, or solute without direct evidence."
+
+  - sourceId: source_pmc_variable_order_fractional_review
+    title: "Applications of variable-order fractional operators: a review"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7069480/"
+    doi: "10.1098/rspa.2019.0498"
+    publisher: "Proceedings of the Royal Society A"
+    authorityTier: PEER_REVIEWED
+    accessClass: FREE_OPEN
+    language: English
+    level: RESEARCH
+    versionOrPublicationDate: "2020"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Reviews anomalous and complex diffusive transport where classical constant-order diffusion models can fail, including heterogeneity, memory effects, long-range interactions, and changing scaling behavior."
+    kupHorizontals: [mathematics, transport-phenomena, biology, materials-science]
+    notEvidenceFor:
+      - "The claim that fractional calculus is required for every deviation from a simple diffusion model."
+      - "A GlobeRAG architecture or any claim that information retrieval should literally follow a fractional diffusion equation."
+
+  - sourceId: source_ucdavis_ebs127_diffusion_lab
+    title: "EBS127 Diffusion Lab Demo"
+    url: "https://video.ucdavis.edu/media/EBS127%2BDiffusion%2BLab%2BDemo/1_25pgvrpu"
+    doi: null
+    publisher: "University of California, Davis"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: UNDERGRADUATE
+    versionOrPublicationDate: null
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Demonstrates a laboratory experiment for determining methylene-blue diffusivity in agarose gels under controlled gel concentration and temperature conditions."
+    kupHorizontals: [scientific-method-experimental-design, measurement-science-metrology, transport-phenomena]
+    notEvidenceFor:
+      - "A diffusion coefficient for a different tracer, gel composition, temperature, or imaging method."
+      - "Proof that a planned KUP camera-based gel experiment is quantitatively valid before calibration and replication."
+
+  - sourceId: source_gwu_aapt_diffusion_gels
+    title: "AAPT Workshop, Brownian Motion to Diffusion Random Walks in Introductory Physics"
+    url: "https://www2.gwu.edu/~phy21bio/2010AAPTDC/diffusioningels.html"
+    doi: null
+    publisher: "George Washington University"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: UNDERGRADUATE
+    versionOrPublicationDate: "2010 AAPT workshop"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Its Diffusion in Gels section provides a camera-based agarose-gel activity using repeated images, spatial intensity profiles, and FWHM measurements over time."
+    kupHorizontals: [scientific-method-experimental-design, measurement-science-metrology, physics, transport-phenomena]
+    notEvidenceFor:
+      - "A calibrated concentration measurement unless image intensity is independently related to concentration in the chosen setup."
+      - "A universal linear FWHM-versus-time law; the correct scaling/model must be tested from the data and geometry."

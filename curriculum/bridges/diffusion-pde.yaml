@@ -1,0 +1,12 @@
+bridgeId: bridge_diffusion_pde
+edgeType: REPRESENTS
+from: mathematics
+to: concept_diffusion
+description: >-
+  The diffusion equation is a parabolic PDE representation of a field whose local time
+  rate of change is driven by spatial curvature under the constant-coefficient Fickian
+  model. MIT 18.152 explicitly treats the diffusion equation as a fundamental PDE for
+  heat spreading and chemical diffusion.
+sourceRefs:
+  - source_mit_pde_diffusion_18152
+status: VERIFIED

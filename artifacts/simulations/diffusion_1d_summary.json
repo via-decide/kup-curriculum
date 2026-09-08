@@ -1,0 +1,58 @@
+{
+  "model": "1D constant-coefficient Fickian diffusion",
+  "equation": "dc/dt = D d2c/dx2",
+  "boundaryCondition": "zero net flux at both ends",
+  "parameters": {
+    "D_m2_s": 1e-09,
+    "length_m": 0.2,
+    "dx_m": 0.001,
+    "dt_s": 100.0,
+    "total_time_s": 20000.0,
+    "initial_sigma_m": 0.003,
+    "stability_ratio": 0.10000000000000002
+  },
+  "checks": {
+    "final_mass_error": 5.551115123125783e-16,
+    "max_relative_variance_error": 9.680376540049146e-16,
+    "mass_conservation_pass": true,
+    "variance_growth_pass": true
+  },
+  "snapshots": [
+    {
+      "time_s": 0,
+      "mass": 0.9999999999999999,
+      "mean_m": 2.693158215675734e-18,
+      "variance_m2": 9.000000000000009e-06,
+      "expected_variance_m2": 9e-06,
+      "relative_variance_error": 9.411477191714447e-16
+    },
+    {
+      "time_s": 5000,
+      "mass": 0.9999999999999999,
+      "mean_m": 1.272489520926178e-18,
+      "variance_m2": 1.9000000000000015e-05,
+      "expected_variance_m2": 1.9e-05,
+      "relative_variance_error": 7.132909029509897e-16
+    },
+    {
+      "time_s": 10000,
+      "mass": 0.9999999999999996,
+      "mean_m": 8.102539401098702e-19,
+      "variance_m2": 2.9000000000000024e-05,
+      "expected_variance_m2": 2.9e-05,
+      "relative_variance_error": 8.17824914590359e-16
+    },
+    {
+      "time_s": 20000,
+      "mass": 0.9999999999999993,
+      "mean_m": 4.961360577482993e-19,
+      "variance_m2": 4.900000000000005e-05,
+      "expected_variance_m2": 4.9000000000000005e-05,
+      "relative_variance_error": 9.680376540049146e-16
+    }
+  ],
+  "provenance": {
+    "generator": "simulations/diffusion_1d.py",
+    "executionNote": "Generated from the committed deterministic algorithm and independently sanity-checked before commit. Re-run the script to regenerate."
+  }
+}

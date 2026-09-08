@@ -1,0 +1,12 @@
+bridgeId: bridge_diffusion_simulation
+edgeType: SIMULATED_BY
+from: concept_diffusion
+to: simulation
+description: >-
+  The diffusion PDE can be advanced numerically with finite-difference methods. The
+  exemplar uses a deterministic 1-D explicit finite-volume/finite-difference update
+  with a stability guard and mass-conservation checks; it is a learning artifact, not
+  a validated physical model of a specific KUP system.
+sourceRefs:
+  - source_mit_pde_diffusion_18152
+status: VERIFIED

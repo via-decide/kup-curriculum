@@ -1,0 +1,11 @@
+bridgeId: bridge_diffusion_transport
+edgeType: REPRESENTS
+from: concept_diffusion
+to: transport-phenomena
+description: >-
+  Diffusion is the mass-transfer member of the flux/gradient family used in transport
+  phenomena. MIT 3.185 explicitly couples conservation and constitutive laws and uses
+  the mathematical similarity between diffusion and heat conduction.
+sourceRefs:
+  - source_mit_transport_3185
+status: VERIFIED
