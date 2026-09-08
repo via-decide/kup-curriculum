@@ -120,3 +120,20 @@ sources:
     notEvidenceFor:
       - "A diffusion coefficient for a different tracer, gel composition, temperature, or imaging method."
       - "Proof that a planned KUP camera-based gel experiment is quantitatively valid before calibration and replication."
+
+  - sourceId: source_gwu_aapt_diffusion_gels
+    title: "AAPT Workshop, Brownian Motion to Diffusion Random Walks in Introductory Physics - Diffusion in Gels"
+    url: "https://www2.gwu.edu/~phy21bio/2010AAPTDC/diffusioningels.html"
+    doi: null
+    publisher: "George Washington University"
+    authorityTier: AUTHORITATIVE_INSTITUTION
+    accessClass: FREE_OPEN
+    language: English
+    level: UNDERGRADUATE
+    versionOrPublicationDate: "2010 AAPT workshop"
+    lastVerified: "2026-09-09"
+    whatItTeaches: "Provides a camera-based agarose-gel diffusion activity using repeated images, spatial intensity profiles, and FWHM measurements over time."
+    kupHorizontals: [scientific-method-experimental-design, measurement-science-metrology, physics, transport-phenomena]
+    notEvidenceFor:
+      - "A calibrated concentration measurement unless image intensity is independently related to concentration in the chosen setup."
+      - "A universal linear FWHM-versus-time law; the correct scaling/model must be tested from the data and geometry."
