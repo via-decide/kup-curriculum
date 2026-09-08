@@ -1,0 +1,314 @@
+# curriculum/graph.yaml
+#
+# Canonical 35-domain inventory for the KUP learning graph (Phase 1 of
+# via-decide/kup-curriculum#17). Each entry validates against
+# contracts/domain.schema.json -- see tests/graph-integrity.test.mjs.
+#
+# kupRepresentation answers the graph's one governing question for every
+# domain: "What representation does this field give KUP that another field
+# cannot?" A generic answer ("teaches math") fails review -- see issue #17,
+# risk 4 (AI-generated pseudo-knowledge).
+#
+# canonicalStackPosition marks where a domain sits in the linear learning
+# stack from the issue (MATHEMATICS -> ... -> WHOLE PHYSICAL SYSTEMS); null
+# for domains that cut across the stack rather than occupying one position.
+#
+# status is FROZEN for every Phase 1 domain: the ID and definition are
+# locked, but no concepts have been seeded under it yet (that's Phase 2).
+
+schemaVersion: 1
+edgeTypes:
+  - PREREQUISITE_OF
+  - REPRESENTS
+  - GENERALIZES
+  - SPECIALIZES
+  - MATHEMATICALLY_EQUIVALENT_TO
+  - PHYSICALLY_ANALOGOUS_TO
+  - MEASURED_BY
+  - SIMULATED_BY
+  - CONTROLS
+  - CAUSES_CANDIDATE
+  - EVIDENCE_FOR
+  - USED_BY_KUP_SYSTEM
+  - UNRESOLVED_WITH
+
+domains:
+  - domainId: mathematics
+    name: Mathematics
+    order: 1
+    kupRepresentation: "The formal notation and proof structure every other domain borrows to state a claim precisely enough to be checked."
+    canonicalStackPosition: MATHEMATICS
+    relatedKupSystems: [LogicHub, GlobeRAG]
+    status: FROZEN
+
+  - domainId: dynamical-systems
+    name: Dynamical Systems
+    order: 2
+    kupRepresentation: "State-space and trajectory representations for anything that evolves over time -- the shared language behind control loops, population models, and circuit transients alike."
+    canonicalStackPosition: DYNAMICAL_SYSTEMS
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: control-theory
+    name: Control Theory
+    order: 3
+    kupRepresentation: "Feedback-loop representations (error, gain, stability margin) for keeping a real system at a target state despite disturbance -- the theory behind every sensor-driven correction KUP builds."
+    canonicalStackPosition: CONTROL_ELECTRONICS
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: signal-processing
+    name: Signal Processing
+    order: 4
+    kupRepresentation: "Time-domain vs frequency-domain representations of measured data -- the only domain that tells KUP whether a sensor reading is real signal or aliased noise."
+    canonicalStackPosition: MEASUREMENT_STATISTICS
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: physics
+    name: Physics
+    order: 5
+    kupRepresentation: "Conservation laws and field equations that bound what any simulated or measured system is physically allowed to do -- the reality check under every model."
+    canonicalStackPosition: PHYSICS_CHEMISTRY
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: chemistry
+    name: Chemistry
+    order: 6
+    kupRepresentation: "Reaction and equilibrium representations for material and biological processes that pure physics leaves as a black box (electrochemistry, nutrient uptake, corrosion)."
+    canonicalStackPosition: PHYSICS_CHEMISTRY
+    relatedKupSystems: [Orchade]
+    status: FROZEN
+
+  - domainId: materials-science
+    name: Materials Science
+    order: 7
+    kupRepresentation: "Structure-property relationships that explain why a real component fails under stress, heat, or time in a way neither physics nor chemistry alone predicts."
+    canonicalStackPosition: PHYSICS_CHEMISTRY
+    relatedKupSystems: [LogicHub]
+    status: FROZEN
+
+  - domainId: transport-phenomena
+    name: Transport Phenomena
+    order: 8
+    kupRepresentation: "Flux/gradient representations (heat, mass, momentum transfer) that unify diffusion, fluid flow, and thermal management across otherwise unrelated KUP hardware and agriculture problems."
+    canonicalStackPosition: PHYSICS_CHEMISTRY
+    relatedKupSystems: [Orchade, LogicHub]
+    status: FROZEN
+
+  - domainId: biology
+    name: Biology
+    order: 9
+    kupRepresentation: "Living-system representations (growth curves, feedback regulation, population dynamics) for the parts of KUP's work -- crops, ecosystems -- that don't obey purely engineered dynamics."
+    canonicalStackPosition: MATERIALS_BIOLOGY
+    relatedKupSystems: [Orchade]
+    status: FROZEN
+
+  - domainId: computation
+    name: Computation
+    order: 10
+    kupRepresentation: "Algorithmic complexity and computability representations -- what's actually tractable to compute, as distinct from what's merely expressible as an equation."
+    canonicalStackPosition: COMPUTATION
+    relatedKupSystems: [LogicHub, GlobeRAG]
+    status: FROZEN
+
+  - domainId: embedded-systems-electronics
+    name: Embedded Systems + Electronics
+    order: 11
+    kupRepresentation: "Circuit and firmware representations for turning a physical quantity into a digital signal and back -- the layer every KUP sensor and actuator actually runs on."
+    canonicalStackPosition: CONTROL_ELECTRONICS
+    relatedKupSystems: [LogicHub]
+    status: FROZEN
+
+  - domainId: robotics
+    name: Robotics
+    order: 12
+    kupRepresentation: "Kinematic and actuation representations for coupling control theory to a physical body that must move through real space without violating its own constraints."
+    canonicalStackPosition: null
+    relatedKupSystems: [LogicHub]
+    status: FROZEN
+
+  - domainId: computer-vision
+    name: Computer Vision
+    order: 13
+    kupRepresentation: "Representations that turn raw pixels into structured measurement -- the only domain that lets KUP treat a camera as a real sensor instead of a picture."
+    canonicalStackPosition: AI_GRAPH_SYSTEMS
+    relatedKupSystems: [Orchade]
+    status: FROZEN
+
+  - domainId: machine-learning
+    name: Machine Learning
+    order: 14
+    kupRepresentation: "Function-approximation representations for mapping data to prediction when no closed-form physical model is known or tractable."
+    canonicalStackPosition: AI_GRAPH_SYSTEMS
+    relatedKupSystems: [GlobeRAG, Orchade]
+    status: FROZEN
+
+  - domainId: ai-reasoning-globerag
+    name: AI Reasoning + GlobeRAG
+    order: 15
+    kupRepresentation: "Knowledge-graph and retrieval representations for connecting a claim to its evidence across repos -- the representation KUP's own research infrastructure runs on."
+    canonicalStackPosition: AI_GRAPH_SYSTEMS
+    relatedKupSystems: [GlobeRAG]
+    status: FROZEN
+
+  - domainId: causal-inference
+    name: Causal Inference
+    order: 16
+    kupRepresentation: "Representations (DAGs, do-calculus) that distinguish correlation from cause -- without this, GlobeRAG can only ever report association, never a testable causal claim."
+    canonicalStackPosition: AI_GRAPH_SYSTEMS
+    relatedKupSystems: [GlobeRAG]
+    status: FROZEN
+
+  - domainId: scientific-method-experimental-design
+    name: Scientific Method + Experimental Design
+    order: 17
+    kupRepresentation: "The representation of a claim as something falsifiable by a specific, bounded experiment -- the discipline that stops a LearningRun from becoming a plausible-sounding essay."
+    canonicalStackPosition: AUTONOMOUS_EXPERIMENTATION
+    relatedKupSystems: [Orchade, LogicHub]
+    status: FROZEN
+
+  - domainId: active-learning-bayesian-experimental-design
+    name: Active Learning + Bayesian Experimental Design
+    order: 18
+    kupRepresentation: "Representations for choosing the next measurement that most reduces uncertainty -- turns a fixed experiment plan into one that adapts as evidence comes in."
+    canonicalStackPosition: AUTONOMOUS_EXPERIMENTATION
+    relatedKupSystems: [Orchade]
+    status: FROZEN
+
+  - domainId: complex-systems-emergence
+    name: Complex Systems + Emergence
+    order: 19
+    kupRepresentation: "Representations for behavior that arises from component interaction and isn't derivable by summing the parts -- relevant wherever KUP's systems have feedback loops between many small units."
+    canonicalStackPosition: null
+    relatedKupSystems: [Orchade]
+    status: FROZEN
+
+  - domainId: digital-twins-system-identification
+    name: Digital Twins + System Identification
+    order: 20
+    kupRepresentation: "Representations for building a model of a real system directly from its measured input/output behavior, when the underlying physics isn't fully known in advance."
+    canonicalStackPosition: WHOLE_PHYSICAL_SYSTEMS
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: simulation
+    name: Simulation
+    order: 21
+    kupRepresentation: "Numerical representations that let a model be exercised computationally before (or instead of) a costly physical trial -- the bridge between an equation and a real experiment."
+    canonicalStackPosition: WHOLE_PHYSICAL_SYSTEMS
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: optimization-of-physical-systems
+    name: Optimization of Physical Systems
+    order: 22
+    kupRepresentation: "Constrained-optimization representations for choosing the best design or operating point among physically valid options, not just the mathematically best one."
+    canonicalStackPosition: WHOLE_PHYSICAL_SYSTEMS
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: measurement-science-metrology
+    name: Measurement Science / Metrology
+    order: 23
+    kupRepresentation: "Representations of calibration, uncertainty, and traceability -- the only domain that tells KUP how much to trust a number, not just what the number is."
+    canonicalStackPosition: MEASUREMENT_STATISTICS
+    relatedKupSystems: [LogicHub, Orchade]
+    status: FROZEN
+
+  - domainId: research-software-engineering
+    name: Research Software Engineering
+    order: 24
+    kupRepresentation: "Representations for making a research result reproducible as code (versioning, provenance, deterministic pipelines) instead of a one-off script that only ran once on someone's machine."
+    canonicalStackPosition: null
+    relatedKupSystems: [LogicHub, GlobeRAG]
+    status: FROZEN
+
+  - domainId: cybersecurity
+    name: Cybersecurity
+    order: 25
+    kupRepresentation: "Threat-model representations for what happens when a system is used by an adversarial actor, not just a well-behaved one -- directly informed by this session's real credential-leak incident."
+    canonicalStackPosition: null
+    relatedKupSystems: [GlobeRAG]
+    status: FROZEN
+
+  - domainId: reliability-engineering
+    name: Reliability Engineering
+    order: 26
+    kupRepresentation: "Failure-rate and redundancy representations for how a system degrades over time and use, distinct from whether it works correctly once."
+    canonicalStackPosition: WHOLE_PHYSICAL_SYSTEMS
+    relatedKupSystems: [LogicHub]
+    status: FROZEN
+
+  - domainId: decision-theory
+    name: Decision Theory
+    order: 27
+    kupRepresentation: "Representations for choosing an action under uncertainty given explicit preferences -- the formal layer under any KUP system that has to act, not just predict."
+    canonicalStackPosition: null
+    relatedKupSystems: [GlobeRAG]
+    status: FROZEN
+
+  - domainId: game-theory
+    name: Game Theory
+    order: 28
+    kupRepresentation: "Representations for outcomes that depend on multiple independent decision-makers -- relevant wherever a KUP system interacts with other agents, human or automated, with their own incentives."
+    canonicalStackPosition: null
+    relatedKupSystems: []
+    status: FROZEN
+
+  - domainId: economics-operations-research
+    name: Economics + Operations Research
+    order: 29
+    kupRepresentation: "Resource-allocation and unit-economics representations -- the domain that turns a working prototype into a question of whether it's worth running at scale."
+    canonicalStackPosition: null
+    relatedKupSystems: []
+    status: FROZEN
+
+  - domainId: agricultural-engineering
+    name: Agricultural Engineering
+    order: 30
+    kupRepresentation: "Representations that couple biology, transport phenomena, and control specifically to real crop/growing-system constraints -- the domain Orchade's experiments live in."
+    canonicalStackPosition: null
+    relatedKupSystems: [Orchade]
+    status: FROZEN
+
+  - domainId: space-extreme-environment-engineering
+    name: Space / Extreme-Environment Engineering
+    order: 31
+    kupRepresentation: "Representations for systems that must work correctly with no possibility of in-person repair or a second attempt -- the strictest real test of a reliability model."
+    canonicalStackPosition: null
+    relatedKupSystems: []
+    status: FROZEN
+
+  - domainId: philosophy-of-science
+    name: Philosophy of Science
+    order: 32
+    kupRepresentation: "Representations of what counts as a justified claim at all -- the layer that stops 'AI-generated pseudo-knowledge' (issue #17 risk 4) from being indistinguishable from real findings."
+    canonicalStackPosition: null
+    relatedKupSystems: [GlobeRAG]
+    status: FROZEN
+
+  - domainId: logic
+    name: Logic
+    order: 33
+    kupRepresentation: "Formal inference representations (propositional, predicate, modal) underlying every proof, every schema constraint, and every gate check KUP's pipelines already run."
+    canonicalStackPosition: null
+    relatedKupSystems: [LogicHub, GlobeRAG]
+    status: FROZEN
+
+  - domainId: cognitive-science
+    name: Cognitive Science
+    order: 34
+    kupRepresentation: "Representations of how a human actually reasons and misjudges -- the domain that explains why a technically correct system can still be misread or misused by its operator."
+    canonicalStackPosition: null
+    relatedKupSystems: [GlobeRAG]
+    status: FROZEN
+
+  - domainId: learning-science
+    name: Learning Science
+    order: 35
+    kupRepresentation: "Representations of how retention and transfer actually work -- the domain this very curriculum graph is built on, since a syllabus that ignores it just becomes a link collection (issue #17 risk 2)."
+    canonicalStackPosition: null
+    relatedKupSystems: []
+    status: FROZEN

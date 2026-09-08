@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://via-decide/kup-curriculum/contracts/source-record.schema.json",
+  "title": "SourceRecord",
+  "description": "An external source cited as evidence. Learning material is not automatically design authority -- notEvidenceFor exists specifically to stop tutorial content from being treated as evidence for engineering/scientific claims (issue #17, risk 'source authority leakage').",
+  "type": "object",
+  "required": [
+    "sourceId", "title", "url", "publisher", "authorityTier",
+    "accessClass", "language", "level", "whatItTeaches",
+    "kupHorizontals", "notEvidenceFor", "lastVerified"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "sourceId": { "type": "string", "pattern": "^source_[a-z0-9_]+$" },
+    "title": { "type": "string", "minLength": 1, "description": "Exact title, not a paraphrase." },
+    "url": { "type": "string", "format": "uri" },
+    "doi": { "type": ["string", "null"] },
+    "publisher": { "type": "string", "minLength": 1, "description": "Exact publisher/institution." },
+    "authorityTier": {
+      "type": "string",
+      "enum": ["PRIMARY_STANDARD", "AUTHORITATIVE_INSTITUTION", "PEER_REVIEWED", "PRACTITIONER", "TUTORIAL"],
+      "description": "TUTORIAL sources may teach but per notEvidenceFor must never alone justify an ESTABLISHED globeragRelevance.claimStatus on a concept."
+    },
+    "accessClass": {
+      "type": "string",
+      "enum": ["FREE_OPEN", "FREE_REGISTRATION", "PAID"],
+      "description": "Prefer FREE_OPEN/FREE_REGISTRATION per issue #17's source-shelf mandate."
+    },
+    "language": { "type": "string" },
+    "level": {
+      "type": "string",
+      "enum": ["INTRODUCTORY", "UNDERGRADUATE", "GRADUATE", "RESEARCH"]
+    },
+    "versionOrPublicationDate": { "type": ["string", "null"] },
+    "lastVerified": {
+      "type": "string",
+      "format": "date",
+      "description": "Date this exact URL/DOI was last confirmed live and matching whatItTeaches. Stale verification is a real-repo failure mode -- CI should flag records unverified beyond a set window once tooling exists."
+    },
+    "whatItTeaches": { "type": "string", "minLength": 1 },
+    "kupHorizontals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "domainId values this source supports."
+    },
+    "notEvidenceFor": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Explicit scope limit -- what this source does NOT establish. Required even if empty, so omission is a deliberate 'nothing excluded' rather than an oversight."
+    }
+  }
+}
