@@ -1,0 +1,54 @@
+runId: run_2026-09-09_diffusion
+date: "2026-09-09"
+conceptRef: concept_diffusion
+status: IN_PROGRESS
+
+representation: >-
+  Fick 1: J = -D grad(c). Combining that constitutive law with local conservation
+  gives partial(c)/partial(t) = D laplacian(c) for constant scalar D with no
+  advection, reaction, or source term.
+
+physicalInterpretation: >-
+  A spatial concentration gradient creates a net flux toward lower concentration
+  under the Fickian model. The local concentration changes because neighboring fluxes
+  do not exactly balance. D controls the spreading time scale and is a property of the
+  species-medium-condition combination, not a universal constant.
+
+workedExample: >-
+  The committed 1-D simulation starts from a normalized Gaussian profile. For the
+  constant-D model, its variance should grow as sigma^2(t) = sigma^2(0) + 2Dt. With
+  D=1e-9 m^2/s and sigma(0)=0.003 m, the expected variance at 20,000 s is 4.9e-5 m^2.
+  The deterministic artifact reproduces that value while conserving total mass to
+  floating-point tolerance.
+
+simulation:
+  performed: true
+  artifactRef: simulations/diffusion_1d.py
+
+measurementOrExperiment:
+  performed: false
+  evidenceRef: null
+
+crossDomainBridges:
+  - mathematics
+  - chemistry
+  - transport-phenomena
+  - biology
+  - materials-science
+  - simulation
+  - measurement-science-metrology
+  - ai-reasoning-globerag
+
+kupRelevance: >-
+  Diffusion is a compact training object for the KUP learning method because the same
+  representation crosses PDEs, chemistry, transport, biology, and materials, then
+  becomes both executable simulation and a measurable experiment. The GlobeRAG link
+  remains a hypothesis: KUP can use this run to practice separating model, evidence,
+  calibration, boundary conditions, and admissible conclusions without claiming that
+  information literally diffuses.
+
+unresolvedQuestion: >-
+  After the gel/camera experiment is run, do the measured profile widths and full
+  spatial profiles support the constant-D Fickian model over the frozen range, or do
+  residuals/replicates indicate concentration dependence, convection, interaction with
+  the gel, or another non-Fickian mechanism?
